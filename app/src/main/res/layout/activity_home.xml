@@ -1,74 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
-    android:padding="24dp"
+    android:gravity="center_horizontal"
+    android:padding="32dp"
     android:background="@color/white">
 
-    <!-- Header/Title -->
+    <!-- App Logo/Title -->
+    <ImageView
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:src="@drawable/logo"
+        android:layout_marginBottom="24dp"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Daily Notes"
         android:textSize="28sp"
         android:textStyle="bold"
-        android:textColor="@color/black"
-        android:layout_marginBottom="32dp" />
+        android:textColor="@color/primary_text"
+        android:layout_marginBottom="8dp"/>
 
-    <!-- Main Menu Buttons -->
-    <Button
-        android:id="@+id/newNoteButton"
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Catat setiap momen berharga"
+        android:textSize="14sp"
+        android:textColor="@color/secondary_text"
+        android:layout_marginBottom="32dp"/>
+
+    <!-- Menu Buttons Container -->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Buat Catatan"
-        android:textSize="16sp"
-        android:padding="16dp"
-        android:layout_marginBottom="16dp"
+        android:orientation="vertical"
+        android:layout_marginBottom="24dp">
 
-        android:textColor="@color/black" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/newNoteButton"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Buat Catatan Baru"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/primary"
+            app:cornerRadius="12dp"
+            android:layout_marginBottom="16dp"
+            app:iconTint="@color/white"
+            app:iconPadding="8dp"
+            android:elevation="4dp"/>
 
-    <Button
-        android:id="@+id/showNoteButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Lihat Catatan"
-        android:textSize="16sp"
-        android:padding="16dp"
-        android:layout_marginBottom="16dp"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/showNoteButton"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Lihat Catatan Saya"
+            android:textSize="16sp"
+            android:textColor="@color/primary"
+            app:strokeColor="@color/primary"
+            app:strokeWidth="2dp"
+            app:cornerRadius="12dp"
+            android:layout_marginBottom="16dp"
+            app:iconTint="@color/primary"
+            app:iconPadding="8dp"/>
 
-        android:textColor="@color/black" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/profileButton"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Profil Saya"
+            android:textSize="16sp"
+            android:textColor="@color/primary"
+            app:strokeColor="@color/primary"
+            app:strokeWidth="2dp"
+            app:cornerRadius="12dp"
+            android:layout_marginBottom="16dp"
+            app:iconTint="@color/primary"
+            app:iconPadding="8dp"/>
 
-    <Button
-        android:id="@+id/profileButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Profil"
-        android:textSize="16sp"
-        android:padding="16dp"
-        android:layout_marginBottom="16dp"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/aboutButton"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Tentang Aplikasi"
+            android:textSize="16sp"
+            android:textColor="@color/primary"
+            app:strokeColor="@color/primary"
+            app:strokeWidth="2dp"
+            app:cornerRadius="12dp"
+            android:layout_marginBottom="16dp"
+            app:iconTint="@color/primary"
+            app:iconPadding="8dp"/>
 
-        android:textColor="@color/black" />
-
-    <Button
-        android:id="@+id/aboutButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Tentang Aplikasi"
-        android:textSize="16sp"
-        android:padding="16dp"
-        android:layout_marginBottom="16dp"
-
-        android:textColor="@color/black" />
+    </LinearLayout>
 
     <!-- Footer -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="© 2024 Daily Notes App"
+        android:text="© 2025 Daily Notes App"
         android:textSize="12sp"
-        android:textColor="@color/black"
-        android:layout_marginTop="24dp" />
-
+        android:textColor="@color/secondary_text"
+        android:layout_marginTop="40dp"/>
 </LinearLayout>
